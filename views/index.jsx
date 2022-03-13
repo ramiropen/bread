@@ -3,7 +3,7 @@ const Default = require("./layouts/default");
 
 function Index({ breads }) {
   return (
-    <Default title={'title'}>
+    <Default title={"title"}>
       <h2>Index Page</h2>
       {breads.map((bread, index) => {
         return (
@@ -12,6 +12,11 @@ function Index({ breads }) {
           </li>
         );
       })}
+      <div className='newButton'>
+        <a href='/breads/new'>
+          <button>Add a new bread</button>
+        </a>
+      </div>
     </Default>
   );
 }
