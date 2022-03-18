@@ -1,6 +1,6 @@
 
 const React = require("react");
-const Default = require("./layouts/default");
+const Default = require("./default");
 
 function Show({ bread,index }) {
   return (
