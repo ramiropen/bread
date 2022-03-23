@@ -46,11 +46,13 @@ const express = require("express");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
 
-// CONFIGURATION & VARIABLES
+// CONFIGURATION
 require("dotenv").config();
 const app = express();
+
+// VARIABLES
 const PORT = process.env.PORT;
-const MONGO_URI = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
 
 // DATABASE
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
@@ -73,6 +75,10 @@ app.get("/", (req, res) => {
 // Breads
 const breadsController = require("./controllers/breads_controller.js");
 app.use("/breads", breadsController);
+
+// Bakers
+const bakersController = require("./controllers/bakers_controller.js");
+app.use("/bakers", bakersController);
 
 // 404 Page
 app.get("*", (req, res) => {

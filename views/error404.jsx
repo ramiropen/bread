@@ -6,6 +6,7 @@ function error404({ breads }) {
     <Default title={'title'}>
       <h2>404 Error</h2>
       <a href={`/breads`}>Return to Breads Page</a>
+      <img></img>
 
     </Default>
   );
