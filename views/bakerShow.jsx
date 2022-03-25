@@ -17,6 +17,19 @@ function Show({ baker }) {
           return <li key={bread.id}>{bread.name}</li>;
         })}
       </ul>
+
+        {/* delete button */}
+        <form action={`/bakers/${baker.id}?_method=DELETE`} method="POST">
+          <input type="submit" value="DELETE"/>
+        </form>
+
+
+        
+        {
+          baker.breads.map((bread) => {
+
+          })
+        }
     </Default>
   );
 }
